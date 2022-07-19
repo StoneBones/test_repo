@@ -1,5 +1,28 @@
 {
   "dependencies": {
     "three": "^0.142.0"
-  }
+  },
+  "name": "test_repo",
+  "description": "Test website that loads a gltf",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StoneBones/test_repo.git"
+  },
+  "keywords": [
+    "gltf",
+    "3dModel",
+    "WebGl"
+  ],
+  "author": "Andrew DePew",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StoneBones/test_repo/issues"
+  },
+  "homepage": "https://github.com/StoneBones/test_repo#readme"
 }
