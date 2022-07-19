@@ -29,11 +29,11 @@
 
 		<script type="module">
 
-			import * as THREE from 'three';
+			import * as THREE from 'node_modules/three/build';
 
-			import { OrbitControls } from './jsm/controls/OrbitControls.js';
-			import { GLTFLoader } from './jsm/loaders/GLTFLoader.js';
-			import { RGBELoader } from './jsm/loaders/RGBELoader.js';
+			import { OrbitControls } from './js/OrbitControls.js';
+			import { GLTFLoader } from './js/GLTFLoader.js';
+			import { RGBELoader } from './js/RGBELoader.js';
 
 			let camera, scene, renderer;
 
@@ -51,7 +51,7 @@
 				scene = new THREE.Scene();
 
 				new RGBELoader()
-					.setPath( 'textures/equirectangular/' )
+					.setPath( 'textures/' )
 					.load( 'royal_esplanade_1k.hdr', function ( texture ) {
 
 						texture.mapping = THREE.EquirectangularReflectionMapping;
@@ -63,8 +63,8 @@
 
 						// model
 
-						const loader = new GLTFLoader().setPath( 'models/gltf/DamagedHelmet/glTF/' );
-						loader.load( 'DamagedHelmet.gltf', function ( gltf ) {
+						const loader = new GLTFLoader().setPath( 'models/' );
+						loader.load( 'bldg2.gltf', function ( gltf ) {
 
 							scene.add( gltf.scene );
 
